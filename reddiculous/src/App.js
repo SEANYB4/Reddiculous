@@ -1,23 +1,17 @@
-import logo from './logo.svg';
+
 import './App.css';
 import './Components/card.css';
 import ReddiculousLogo from './logoReddiculous.svg';
-
 import {Card} from './Components/card';
-import { Sidebar } from './Components/sidebar';
 import { SearchBar } from './Components/searchbar';
 import {BrowserRouter as Router, Route, Link, NavLink, Routes} from 'react-router-dom'; 
+
 
 function App() {
   return (
   
           <Router>
 
-
-              <Routes>
-
-                {/* <Route path='/' element={<Sidebar />}></Route> */}
-              </Routes>
 
               <nav>
                 <div class='logo'>
@@ -27,6 +21,8 @@ function App() {
                     <NavLink to='/'>
                       <SearchBar />
                     </NavLink>
+
+                  
 
                </nav>
 
@@ -49,15 +45,8 @@ function App() {
                 <div class='content'>
                   
              
-                  <div class='cards'>
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
-                    
-                  
+                  <div class='cards' id='cards'>
+                    <Card></Card>
 
 
                   </div>
@@ -68,7 +57,7 @@ function App() {
                 </div>
 
              
-            
+            <main></main>
                
 
           </Router>
@@ -79,5 +68,7 @@ function App() {
 
   );
 }
+
+
 
 export default App;
