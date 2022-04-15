@@ -22,8 +22,13 @@ export const setPosts = subRedditSlice.actions;
 // This is a Redux Thunk that gets posts from a subreddit
 
 export const fetchPosts = () => async (dispatch) => {
-    const posts = await getSubredditPosts();
-    dispatch(setPosts(posts));
+    
+    try {
+        const posts = await getSubredditPosts();
+        dispatch(setPosts(posts));
+    } catch (error) {
+        console.log(error);
+    }
 }
 
 export default subRedditSlice.reducer();

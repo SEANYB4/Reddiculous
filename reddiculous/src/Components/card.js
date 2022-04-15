@@ -1,23 +1,22 @@
 import './card.css';
-
-
-
 import React, { useState } from 'react';
+
+
 
 
   
 
-export const Card = (post) => {
+const Card = (props) => {
    
 
     return (
-        <div class='card'>
-            <h1>Hello</h1>
-    
-    
-            <p>Lorem ipsum</p>
-        </div>
-        
+        <article>
+
+            <a href={"https://reddit.com" + props.article.permalink} target="_blank">
+                <h3>{props.article.title}</h3>
+               <img src={props.article.thumbnail} alt="" />
+            </a>
+        </article>
 
 
 
@@ -26,5 +25,5 @@ export const Card = (post) => {
 }
 
 
-
+export default Card;
 

@@ -1,17 +1,26 @@
 import React from "react";
 import './searchbar.css';
+import { useState } from "react";
+import { setSub } from "../App";
 
 
-export const SearchBar = () => {
+// export const SearchBar = () => {
 
 
-    return (
+//     return (
 
-        <form>
-            <input type='text' placeholder="Search" class='search'></input>
+//         // <form>
+//         //     <input type='text' 
+//         //     name ='' 
+//         //     id='' 
+//         //     placeholder="Search" 
+//         //     className='search'
+//         //     onChange={setSub}
+//         //     >
+//         //     </input>
 
-        </form>
+//         // </form>
 
 
-    )
-}
+//     )
+// }
